@@ -34,7 +34,11 @@ def add_reminder(self, date_time: datetime, type_: str = Reminder.EMAIL):
     reminder = Reminder(date_time=date_time, type=type_)
     self.reminders.append(reminder)
 
-
+def delete_reminder(self, reminder_index: int):
+    if 0 <= reminder_index < len(self.reminders):
+        del self.reminders[reminder_index]
+    else:
+        reminder_not_found_error()
 # TODO: Implement Day class here
 
 
