@@ -39,6 +39,11 @@ def delete_reminder(self, reminder_index: int):
         del self.reminders[reminder_index]
     else:
         reminder_not_found_error()
+def __str__(self):
+        return (f"ID: {self.id}\n"
+                f"Event title: {self.title}\n"
+                f"Description: {self.description}\n"
+                f"Time: {self.start_at} - {self.end_at}")
 # TODO: Implement Day class here
 
 
